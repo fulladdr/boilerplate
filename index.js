@@ -18,7 +18,7 @@ mongoose.connect('mongodb+srv://fulladdr:980402@fulladdr.id96y.mongodb.net/<dbna
 
 
 app.get('/', (req, res) => {//루트 디렉토리로 가면 hello world 출력 가능
-    res.send('Hello World!')
+    res.send('fulladdr is tired as hell')
 })
 
 app.post('/register', (req, res) => {
