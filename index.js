@@ -2,6 +2,9 @@ const express = require('express')//express 모듈을 가져옴
 const app = express() //새로운 express app을 만듬
 const port = 5000   //port number은 마음대로 설정 가능
 const bodyParser = require('body-parser');
+
+const config = require('./config/key');
+
 const { User } = require("./models/User");
 
 //application.x-ww-form-urlencoded
@@ -11,7 +14,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
 const mongoose = require('mongoose')
-mongoose.connect('mongodb+srv://fulladdr:980402@fulladdr.id96y.mongodb.net/<dbname>?retryWrites=true&w=majority', {
+mongoose.connect(config.mongoURI, {
     useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex: true, useFindAndModify: false//to prevent error
 }).then(() => console.log('MongoDB Connected'))
     .catch(err => console.log(err))
