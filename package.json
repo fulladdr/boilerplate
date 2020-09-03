@@ -1,21 +1,29 @@
 {
   "name": "boiler-plate2",
   "version": "1.0.0",
-  "description": "",
+  "description": "1. npm init\r 2. npm install express --save\r --save is form storing information\r every dependencies are in node_module",
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
     "backend": "nodemon node index.js --delay 2",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "author": "fulladdr",
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.19.0",
     "express": "^4.17.1",
-    "mongoose": "^5.10.0"
+    "mongoose": "^5.10.2"
   },
   "devDependencies": {
     "nodemon": "^2.0.4"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fulladdr/boilerplate.git"
+  },
+  "bugs": {
+    "url": "https://github.com/fulladdr/boilerplate/issues"
+  },
+  "homepage": "https://github.com/fulladdr/boilerplate#readme"
 }
