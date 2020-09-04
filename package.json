@@ -1,14 +1,25 @@
 {
+<<<<<<< HEAD
   "name": "boiler-plate",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
+=======
+  "name": "boiler-plate2",
+  "version": "1.0.0",
+  "description": "1. npm init\r 2. npm install express --save\r --save is form storing information\r every dependencies are in node_module",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "backend": "nodemon node index.js --delay 2",
+>>>>>>> f9a100f27d2c51630fd29fc9113561cafb8e6b72
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "fulladdr",
   "license": "ISC",
   "dependencies": {
+<<<<<<< HEAD
     "bcrypt": "^5.0.0",
     "body-parser": "^1.19.0",
     "express": "^4.17.1",
@@ -17,4 +28,21 @@
   "devDependencies": {
     "nodemon": "^2.0.4"
   }
+=======
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "mongoose": "^5.10.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.4"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fulladdr/boilerplate.git"
+  },
+  "bugs": {
+    "url": "https://github.com/fulladdr/boilerplate/issues"
+  },
+  "homepage": "https://github.com/fulladdr/boilerplate#readme"
+>>>>>>> f9a100f27d2c51630fd29fc9113561cafb8e6b72
 }

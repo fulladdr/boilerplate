@@ -37,14 +37,16 @@ const userSchema = mongoose.Schema({
 })
 
 userSchema.pre('save', function(next){
+    var user = this;
     //비밀번호를 암호화 시킨다.
     bcrypt.genSalt(saltRounds, function(err, salt) {//error가 나면 error, 아니면 salt를 가져온다
         if (err) return next(err)//error가 났을 경우
-        bcrypt.hash(myPlaintextPassword, salt, function(err, hash) {//hash를 하는데, postman에 넣는 비밀번호를 넣어줌
-            // Store hash in your password DB.
-        });
-    });
-    next()
+        bcrypt.hash(user.password,salt,function(err, hash){
+            if (err) return next(err)
+            user.password = hash
+            next()
+        })
+    })
 })//User model을 저장하기 전에 function
 
 const User = mongoose.model('User', userSchema)
