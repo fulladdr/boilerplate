@@ -13,13 +13,10 @@ every dependencies are in node_module
 6. npm install --save-dev nodemon
 dev local에서 할 때만 사용하겠다는 뜻
 
-<<<<<<< HEAD
 7. npm run backend
 
 ------------------------------------------
 
 8. npm install bcrypt --save 
 비밀번호 암호화
-=======
 7. npm run backend
->>>>>>> f9a100f27d2c51630fd29fc9113561cafb8e6b72

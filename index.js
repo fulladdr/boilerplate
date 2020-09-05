@@ -22,7 +22,7 @@ mongoose.connect(config.mongoURI, {
 
 
 app.get('/', (req, res) => {//루트 디렉토리로 가면 hello world 출력 가능
-    res.send('fulladdr');
+    res.send('happy jaewon');
 })
 
 app.post('/register', (req, res) => {
@@ -36,6 +36,28 @@ app.post('/register', (req, res) => {
          })
          //json형식으로 성공했음을 전달해줌
      })
+ })
+
+ app.post('/login', (req, res) => {
+    //database에서 email 번호 찾기
+    User.findOne({email:req.body.email}, (err, userInfo) => {
+        if (!userInfo){
+            return req.json({
+                loginSuccess: false,
+                message: "제공된 이메일에 해당하는 유저가 없습니다."
+            })
+        }
+    })
+    //요청된 이메일을 데이터베이스에서 있다면 비밀번호가 맞는 비밀번호인지 확인
+
+    user.comparePassword(req.body.password ,  (err, isMatch) => {
+        if (!isMatch) 
+        return res.json({loginSuccess: false, message: "비밀번호가 틀렸습니다."})
+    //비밀번호까지 맞다면 토큰을 생성하기
+        user.generateToken((err, user) =>{
+
+        })
+    })
  })
 
 app.listen(port, () =>  //port 5000번에서 출력을 해줌
