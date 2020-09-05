@@ -19,4 +19,11 @@ dev local에서 할 때만 사용하겠다는 뜻
 
 8. npm install bcrypt --save 
 비밀번호 암호화
-7. npm run backend
+
+------------------------------------------
+REACT START
+------------------------------------------
+
+1. cd client
+2. npx create-react-app .
+
