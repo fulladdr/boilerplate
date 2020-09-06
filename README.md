@@ -30,3 +30,6 @@ REACT START
 페이지 이동을 할 때 React router Dom 사용
 
 cd client -> npm install react-router-dom --save
+
+client가 server에게 보낼때 AXIOS 사용
+cd client -> npm install axios --save
