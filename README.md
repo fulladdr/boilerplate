@@ -1,3 +1,6 @@
+Hello, My Friends
+Thank you for having interest in this repository !
+
 1. npm init
 2. npm install express --save
 --save is form storing information
