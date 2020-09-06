@@ -1,5 +1,5 @@
 Hello, My Friends
-Thank you for having interest in this repository !
+Thank you for having interest in this repository ! :)
 
 1. npm init
 2. npm install express --save
@@ -18,11 +18,8 @@ dev local에서 할 때만 사용하겠다는 뜻
 
 7. npm run backend
 
-------------------------------------------
-
 8. npm install bcrypt --save 
 비밀번호 암호화
-
 ------------------------------------------
 REACT START
 ------------------------------------------
@@ -30,3 +27,6 @@ REACT START
 1. cd client
 2. npx create-react-app .
 
+페이지 이동을 할 때 React router Dom 사용
+
+cd client -> npm install react-router-dom --save

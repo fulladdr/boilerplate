@@ -4,9 +4,9 @@ const port = 5000   //port number은 마음대로 설정 가능
 const bodyParser = require("body-parser");
 const cookieParser = require('cookie-parser');
 
-const config = require("./config/key");
+const config = require("./server/config/key");
 
-const { User } = require("./models/User");
+const { User } = require("./server/models/User");
 
 //application.x-ww-form-urlencoded
 //해당 type 문서를분석해서 가져오게해줌
