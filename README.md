@@ -29,7 +29,14 @@ REACT START
 
 페이지 이동을 할 때 React router Dom 사용
 
-cd client -> npm install react-router-dom --save
+*cd client -> npm install react-router-dom --save
 
-client가 server에게 보낼때 AXIOS 사용
+*client가 server에게 보낼때 AXIOS 사용
 cd client -> npm install axios --save
+
+*configuring the proxy manually
+https://create-react-app.dev/docs/proxying-api-requests-in-development/
+
+
+*how to run client server? 
+cd client -> npm run start
