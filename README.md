@@ -6,7 +6,6 @@ Thank you for having interest in this repository ! :)
 --save is form storing information
 every dependencies are in node_module
 
-
 3. npm install mongoose --save
 
 4. npm install body-parser --save
@@ -20,6 +19,9 @@ dev local에서 할 때만 사용하겠다는 뜻
 
 8. npm install bcrypt --save 
 비밀번호 암호화
+
+9. npm install jsonwebtoken --save
+10. npm install cookie-parser --save
 ------------------------------------------
 REACT START
 ------------------------------------------
@@ -40,3 +42,5 @@ https://create-react-app.dev/docs/proxying-api-requests-in-development/
 
 *how to run client server? 
 cd client -> npm run start
+
+cmd 1 is for client, cmd 2 is for server

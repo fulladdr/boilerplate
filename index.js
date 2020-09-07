@@ -1,9 +1,7 @@
 const express = require("express");//express 모듈을 가져옴
 const app = express(); //새로운 express app을 만듬
-const port = 5000   //port number은 마음대로 설정 가능
 const bodyParser = require("body-parser");
 const cookieParser = require('cookie-parser');
-
 const config = require("./server/config/key");
 
 const { User } = require("./server/models/User");
@@ -59,7 +57,6 @@ app.post('/register', (req, res) => {
     user.comparePassword(req.body.password ,  (err, isMatch) => {
         if (!isMatch) 
         return res.json({loginSuccess: false, message: "비밀번호가 틀렸습니다."})
-    //비밀번호까지 맞다면 토큰을 생성하기
         user.generateToken((err, user) =>{
             if (err) return res.status(400).send(err);
             //토큰을 저장한다. 어디에 ?  쿠키
@@ -69,6 +66,8 @@ app.post('/register', (req, res) => {
         })
     })
  })
+
+ const port = 5000   //port number은 마음대로 설정 가능
 
 app.listen(port, () =>  //port 5000번에서 출력을 해줌
     console.log(`Example app listening at http://localhost:${port}`)
