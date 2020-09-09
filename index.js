@@ -4,6 +4,7 @@ const bodyParser = require("body-parser");
 const cookieParser = require('cookie-parser');
 const config = require("./server/config/key");
 
+const {auth} =require('./middleware/auth');
 const { User } = require("./server/models/User");
 
 //application.x-ww-form-urlencoded
@@ -29,7 +30,7 @@ app.get('/api/hello', (req, res)=>{
     res.send("안녕하세요");
 })
 
-app.post('/register', (req, res) => {
+app.post('/api/users/register', (req, res) => {
     //회원 가입할 때 피욯나 정보를 client에서 가져오면
     //그것들을 데이터 베이스에 넣어준다
     const user = new User(req.body)//request body에 정보를 넣어줌
@@ -42,7 +43,7 @@ app.post('/register', (req, res) => {
      })
  })
 
- app.post('/login', (req, res) => {
+ app.post('/api/users/login', (req, res) => {
     //database에서 email 번호 찾기
     User.findOne({email:req.body.email}, (err, userInfo) => {
         if (!userInfo){
@@ -66,6 +67,10 @@ app.post('/register', (req, res) => {
         })
     })
  })
+
+app.post('/api/users/auth', auth , (req, res) => {
+
+})
 
  const port = 5000   //port number은 마음대로 설정 가능
 

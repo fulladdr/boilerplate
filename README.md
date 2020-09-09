@@ -22,6 +22,7 @@ dev local에서 할 때만 사용하겠다는 뜻
 
 9. npm install jsonwebtoken --save
 10. npm install cookie-parser --save
+
 ------------------------------------------
 REACT START
 ------------------------------------------
@@ -44,3 +45,5 @@ https://create-react-app.dev/docs/proxying-api-requests-in-development/
 cd client -> npm run start
 
 cmd 1 is for client, cmd 2 is for server
+
+npm install jsonwebtoken --save
