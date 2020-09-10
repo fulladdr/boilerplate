@@ -86,3 +86,13 @@ app.get('/api/users/auth', auth , (req, res) => {//middle ware added
 app.listen(port, () =>  //port 5000번에서 출력을 해줌
     console.log(`Example app listening at http://localhost:${port}`)
 );
+
+app.get("/api/users/logout", auth, (req, res) => {
+    User.findOneAndUpdate({ _id: req.user._id }, { token: "" }, (err, user) => {
+      if (err) return res.json({ success: false, err });
+      return res.status(200).send({
+        success: true,
+      });
+    });
+  });
+  
