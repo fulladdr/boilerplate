@@ -54,3 +54,16 @@ how to open in cmd ->
 change package.json to "dev":"concurrently \"npm run backend\" \"npm run start --prefix client\"" 
 and then
 npm run dev
+
+how to install antd
+-> cd client(all the files related to client folder)
+npm install antd --save
+
+*setting up redux!
+1. redux
+2. react-redux
+3. redux-promis (middleware)
+4. redux-thunk (middleware)
+-> cd client 
+REMEMBER all of it have to be installed in client folder 
+npm install redux react-redux redux-promise redux-thunk --save
