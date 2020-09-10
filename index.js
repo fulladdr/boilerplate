@@ -69,12 +69,16 @@ app.post('/api/users/register', (req, res) => {
  })
 
 app.get('/api/users/auth', auth , (req, res) => {//middle ware added
-    //인증 처리 하는 곳
-    //클라이언트 쿠키에서 토큰을 가져온다.
-    //토큰을 복호화한 후 유저를 찾는다
-    //유저가 잇으면 인증 Okay, 유저가 없으면 인정 No!
-    let token = req.cookies.x_auth;
-    User.findByTokjen()
+    //role 1어드민  role 2 특정 부서만
+    res.status(200).json({
+        _id: req.user._id,
+        isAdmin: req.user.role === 0 ? false : true,
+        isAuth: true,
+        email: req.user.email,
+        name: req.user.name,
+        role: req.user.role,
+        image: req.user.image,
+    })
 })
 
  const port = 5000   //port number은 마음대로 설정 가능
