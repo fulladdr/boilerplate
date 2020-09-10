@@ -47,3 +47,10 @@ cd client -> npm run start
 cmd 1 is for client, cmd 2 is for server
 
 npm install jsonwebtoken --save
+
+* install concurrently to open back, front server simultaneously
+which is -> npm install concurrently --save
+how to open in cmd ->     
+change package.json to "dev":"concurrently \"npm run backend\" \"npm run start --prefix client\"" 
+and then
+npm run dev
