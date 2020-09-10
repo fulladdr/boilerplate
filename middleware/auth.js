@@ -1,6 +1,9 @@
 const { User } = require("../server/models/User");
 
+//middleware
+
 let auth = (req, res, next) => {
+  //인증 처리를 하는 곳
   let token = req.cookies.x_auth;
   User.findByToken(token, (err, user) => {
     if (err) throw err;
